@@ -12,4 +12,20 @@ class RoomTest < Minitest::Test
     room = Room.new(:bedroom, 10, 13)
     assert_instance_of Room, room
   end
+
+  def test_it_returns_room_category
+    room = Room.new(:bedroom, 10, 13)
+    actual = room.category
+    expected = :bedroom
+    assert_equal expected, actual
+  end
+
+  def test_it_calculates_area
+    room = Room.new(:bedroom, 10, 13)
+    actual = room.area
+    expected = 130
+    assert_equal expected, actual
+  end
+
+
 end
