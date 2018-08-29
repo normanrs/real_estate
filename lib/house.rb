@@ -1,13 +1,18 @@
 class House
 
-  	attr_reader :value,
-  							:street_address,
-                :depth
+  	attr_reader :price,
+  							:address,
+                :depth,
+                :rooms
 
-  	def initialize(value, street_address)
-  		@value = value
-      @street_address = street_address
+  	def initialize(price, address, rooms = [])
+  		@price = price
+      @address = address
+      @rooms = rooms
   	end
 
+    def add_room(room)
+      @rooms << room
+    end
 
 end
